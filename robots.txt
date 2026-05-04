@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /sonoro-cto-brief_9.html
+
+Sitemap: https://sonoro.ai/sitemap.xml

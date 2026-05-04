@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page not found — Sonoro</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  min-height: 100%;
+  background: #07090a;
+  color: #f2f0eb;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  text-align: center;
+}
+.mark svg {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 40px;
+  display: block;
+}
+.num {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 200;
+  font-size: clamp(96px, 16vw, 160px);
+  line-height: 1;
+  color: rgba(242, 240, 235, 0.08);
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+}
+h1 {
+  font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #f2f0eb;
+  margin-bottom: 20px;
+}
+h1 em { color: #c9a25f; font-style: italic; }
+p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(242, 240, 235, 0.5);
+  max-width: 40ch;
+  margin-bottom: 40px;
+}
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border: 1px solid rgba(242, 240, 235, 0.18);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(242, 240, 235, 0.7);
+  transition: border-color 0.3s, color 0.3s;
+}
+.back:hover { border-color: #c9a25f; color: #c9a25f; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;1,200;1,300&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<div class="page">
+  <div class="mark">
+    <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="28" cy="28" r="26" fill="none" stroke="rgba(242,240,235,0.2)" stroke-width="0.8"/>
+      <circle cx="28" cy="28" r="17" fill="none" stroke="rgba(242,240,235,0.14)" stroke-width="0.6"/>
+      <circle cx="28" cy="28" r="9" fill="none" stroke="rgba(242,240,235,0.1)" stroke-width="0.5"/>
+      <circle cx="28" cy="28" r="2.5" fill="#c9a25f"/>
+    </svg>
+  </div>
+  <div class="num">404</div>
+  <h1>This page does not <em>resonate</em>.</h1>
+  <p>The page you are looking for has moved, or does not exist. The brief is still waiting.</p>
+  <a href="/" class="back">Return to the brief</a>
+</div>
+</body>
+</html>
