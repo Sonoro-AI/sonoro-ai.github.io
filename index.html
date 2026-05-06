@@ -3,156 +3,41 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sonoro — The Intelligence Layer for Food in Care</title>
-<meta name="description" content="An AI orchestration platform connecting culinary judgement, menu intelligence, resident wellbeing, workforce profiling, recruitment and funded learning into one decision-making system." />
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#c9a25f">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="apple-touch-icon" href="icons/icon-192.png">
+<title>Sonoro — Coming Soon</title>
+<meta name="description" content="Sonoro is coming soon." />
+<meta name="theme-color" content="#0a0a0a">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    height: 100%;
+    background: #0a0a0a;
+    color: #f0ece4;
+    font-family: 'Georgia', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .wrap { padding: 2rem; }
+  h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: #9b9284;
+  }
+</style>
 </head>
-<body class="state-initial">
-
-<!-- ============================================================ -->
-<!--  TEASER                                                      -->
-<!-- ============================================================ -->
-<section class="teaser" id="teaser">
-
-  <div class="teaser-atm"></div>
-  <canvas class="teaser-stars" id="starsCanvas"></canvas>
-
-  <div class="teaser-canvas-wrap">
-    <canvas id="ringCanvas"></canvas>
+<body>
+  <div class="wrap">
+    <h1>Sonoro</h1>
+    <p>Coming Soon</p>
   </div>
-
-  <div class="teaser-grain"></div>
-
-  <div class="teaser-stage">
-    <h1 class="wordmark" id="wordmark" aria-label="Sonoro"></h1>
-  </div>
-
-  <button class="entry" id="entry" aria-label="Enter">Enter</button>
-
-  <div class="tmeta tmeta--bl">
-    <div><span class="val">London · Swansea · Dubai</span></div>
-  </div>
-  <div class="tmeta tmeta--br">
-    <div><span class="lbl">Confidential</span></div>
-    <div><span class="accent">CTO Briefing — Part I</span></div>
-  </div>
-
-  <div class="chatbar" id="chatbar" aria-label="Ask Sonoro">
-    <span class="chatbar-icon" aria-hidden="true">
-      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="16" r="2.4" fill="#fff5e6"/>
-        <circle cx="16" cy="16" r="5"  stroke="rgba(242,240,235,0.65)" stroke-width="0.7" fill="none"/>
-        <circle cx="16" cy="16" r="9"  stroke="rgba(242,240,235,0.35)" stroke-width="0.55" fill="none" stroke-dasharray="1.5 3"/>
-        <circle cx="16" cy="16" r="13" stroke="rgba(242,240,235,0.18)" stroke-width="0.45" fill="none"/>
-      </svg>
-    </span>
-    <span class="chatbar-text">
-      <span>Ask</span>
-      <em class="ask-static">Marco Pierre White</em>
-    </span>
-    <span class="chatbar-arrow" aria-hidden="true">
-      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 8 L13 8 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </span>
-  </div>
-
-  <div class="scroll-cue" aria-hidden="true">Scroll to read the brief</div>
-
-</section>
-
-<!-- ============================================================ -->
-<!--  PERSISTENT — custom cursor                                  -->
-<!-- ============================================================ -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-dot" id="cursorDot"></div>
-
-<!-- ============================================================ -->
-<!--  NAV                                                         -->
-<!-- ============================================================ -->
-<nav class="top">
-  <div class="brand-block">
-    <a href="/" aria-label="Sonoro home" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-      <svg class="brand-mark" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10.5"/>
-        <circle cx="12" cy="12" r="7"/>
-        <circle cx="12" cy="12" r="3.5"/>
-        <circle class="pearl" cx="12" cy="12" r="1"/>
-      </svg>
-      <span class="brand-name">Sonoro</span>
-    </a>
-  </div>
-  <div class="menu">
-    <a href="/"><span class="num">I.</span>Resonance</a>
-    <a href="/opportunity"><span class="num">II.</span>Opportunity</a>
-    <a href="/platform"><span class="num">III.</span>Platform</a>
-    <a href="/network"><span class="num">IV.</span>Network</a>
-    <a href="/trust"><span class="num">V.</span>Trust</a>
-    <a href="/business"><span class="num">VI.</span>Business</a>
-    <a href="/mandate"><span class="num">VII.</span>Mandate</a>
-  </div>
-  <a href="/mandate" class="confidential">Confidential — CTO Brief</a>
-</nav>
-
-<!-- ============================================================ -->
-<!--  BRIEF — revealed after Enter                                -->
-<!-- ============================================================ -->
-<div class="brief">
-
-<section class="intro">
-  <div class="intro-inner">
-
-    <div class="intro-meta reveal">
-      <div>
-        <strong>Sonoro Healthcare</strong> · Food Intelligence Platform<br>
-        Prepared for the office of the CTO
-      </div>
-      <div class="right">
-        Confidential briefing · in seven parts<br>
-        Building the Intelligence Layer
-      </div>
-    </div>
-
-    <h1 class="reveal">Where care<br><em>resonates</em><br>through food.</h1>
-
-    <div class="intro-strap reveal">
-      <p class="lede-large">
-        Sonoro is an <em>AI orchestration platform</em> connecting culinary judgement, menu intelligence, resident wellbeing, workforce profiling, recruitment and funded learning into one decision-making system for the care sector.
-        <br><br>
-        Not a chatbot. An intelligence infrastructure.
-      </p>
-      <div class="intro-cta-block">
-        <a href="/opportunity" class="cta primary">Read the brief</a>
-        <a href="/platform" class="cta">Explore the platform</a>
-        <a href="/mandate" class="cta gold">Read the CTO mandate</a>
-      </div>
-    </div>
-
-    <div class="intro-rail reveal">
-      <div class="intro-rail-grid">
-        <div class="intro-node"><span class="dot"></span><span class="nm">Ask Marco</span><span class="lab">Judgement</span></div>
-        <div class="intro-node"><span class="dot"></span><span class="nm">Menu Intelligence</span><span class="lab">Optimisation</span></div>
-        <div class="intro-node"><span class="dot"></span><span class="nm">Happiness Algorithm</span><span class="lab">Wellbeing</span></div>
-        <div class="intro-node"><span class="dot"></span><span class="nm">Talent Intelligence</span><span class="lab">Workforce</span></div>
-        <div class="intro-node"><span class="dot"></span><span class="nm">Curam Loop</span><span class="lab">Recruitment</span></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-</div><!-- /.brief -->
-
-<script src="assets/js/page.js"></script>
-<script src="assets/js/main.js"></script>
 </body>
 </html>
