@@ -293,7 +293,10 @@
   const listenBtn = document.getElementById('listen');
   let audioCtx = null, audioOn = false, masterGain = null, analyser = null, audioData = null;
   function initAudio() {
-    audioCtx   = new (window.AudioContext || window.webkitAudioContext)();
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    // iOS requires an explicit resume() inside the user-gesture call stack
+    // before any nodes are started, otherwise oscillators stay silent.
+    audioCtx.resume();
     masterGain = audioCtx.createGain();
     masterGain.gain.value = 0;
 

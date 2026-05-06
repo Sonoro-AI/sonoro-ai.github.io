@@ -585,9 +585,19 @@ body.show-chatbar .chatbar {
   }
   .tagline-center { font-size: clamp(15px, 4.2vw, 22px); }
 
-  .meta--bl, .meta--br { margin: 0 16px 24px; font-size: 11px; }
-  .meta--bl { bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
-  .meta--br { bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
+  .meta--bl, .meta--br {
+    margin: 0;
+    font-size: 11px;
+    left: 50%;
+    right: auto;
+    text-align: center;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  /* Locations centred above the listen pill */
+  .meta--bl { bottom: calc(116px + env(safe-area-inset-bottom, 0px)); }
+  /* Arriving · Autumn MMXXVI stacked, centred, just above listen pill */
+  .meta--br { bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 
   .listen { bottom: calc(20px + env(safe-area-inset-bottom, 0px)); }
 
